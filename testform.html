@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>Greatest Calculator - IN THE WORLD!</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+function testResults (form) {
+    var CarType = form.cartype.value;
+    var TestVar = form.inputbox.value;
+    var TestYar = form.inputbox2.value;
+
+    if (CarType == 'plus')
+    {
+    alert (TestVar + " " + CarType + " " + TestYar + " is " + (parseInt(TestVar)+parseInt(TestYar)));
+    }
+    else if (CarType == 'minus')
+    {
+    alert (TestVar + " " + CarType + " " + TestYar + " is " + (parseInt(TestVar)-parseInt(TestYar)));
+    }
+    else if (CarType == 'mult')
+    {
+    alert (TestVar + " " + CarType + " " + TestYar + " is " + TestVar*TestYar);
+    }
+    else if (CarType == 'divi')
+    {
+    alert (TestVar + " " + CarType + " " + TestYar + " is " + TestVar/TestYar);
+    }
+    else 
+    {
+    alert ("Somehow you entered something outside the ")
+    }
+
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<FORM NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <BR>
+<INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+<INPUT TYPE="text" NAME="inputbox2" VALUE=""><P>
+<select NAME = "cartype">
+  <option value="plus">Add</option>
+  <option value="minus">Substract</option>
+  <option value="mult">Multiply</option>
+  <option value="divi">Divide</option>
+</select>
+</br >
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+</FORM>
+
+</BODY>
+
+</HTML>
